@@ -1,0 +1,265 @@
+/**
+ * Farm Management – Admin styles
+ */
+
+/* Dashboard */
+.fmp-admin-wrap {
+	max-width: 1200px;
+}
+
+.fmp-dashboard-welcome {
+	font-size: 1.1em;
+	margin-bottom: 1.5em;
+}
+
+/* Demo Mode banner */
+.fmp-demo-banner {
+	margin: 1rem 0 1.5rem 0;
+	padding: 1rem 1.25rem;
+}
+
+.fmp-demo-banner .button {
+	margin-right: 0.5rem;
+}
+
+/* Quick Add section */
+.fmp-quick-add {
+	margin-bottom: 1.5rem;
+	padding: 1rem 0;
+	border-bottom: 1px solid #c3c4c7;
+}
+
+.fmp-quick-add-title {
+	font-size: 1rem;
+	margin: 0 0 0.75rem 0;
+	padding: 0;
+	color: #1d2327;
+}
+
+.fmp-quick-add-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	align-items: center;
+}
+
+.fmp-quick-add-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+}
+
+.fmp-quick-add-btn .dashicons {
+	font-size: 18px;
+	width: 18px;
+	height: 18px;
+}
+
+.fmp-dashboard-cards {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 1rem;
+	margin: 1.5rem 0;
+}
+
+.fmp-stat-card {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+	padding: 1.25rem;
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+}
+
+.fmp-stat-card .fmp-stat-value {
+	font-size: 1.75rem;
+	font-weight: 600;
+	line-height: 1.2;
+	color: #1d2327;
+}
+
+.fmp-stat-card .fmp-stat-label {
+	font-size: 0.875rem;
+	color: #646970;
+}
+
+.fmp-stat-card .fmp-stat-link {
+	font-size: 0.8125rem;
+	margin-top: 0.25rem;
+}
+
+.fmp-stat-card .fmp-stat-add {
+	margin-top: 0.5rem;
+	align-self: flex-start;
+}
+
+.fmp-dashboard-tables,
+.fmp-dashboard-widgets {
+	margin-top: 2rem;
+}
+
+.fmp-dashboard-section,
+.fmp-dashboard-widget {
+	margin-bottom: 2rem;
+}
+
+.fmp-dashboard-section .fmp-section-title,
+.fmp-dashboard-widget .fmp-widget-title {
+	font-size: 1.1rem;
+	margin: 0 0 0.75rem 0;
+	padding: 0;
+}
+
+.fmp-dashboard-section .wp-list-table,
+.fmp-dashboard-widget .wp-list-table {
+	margin-top: 0;
+}
+
+.fmp-widget-view-all {
+	margin: 0.5rem 0 0 0;
+	font-size: 13px;
+}
+
+.fmp-widget-view-all a {
+	text-decoration: none;
+}
+
+.fmp-empty-state {
+	background: #f6f7f7;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+	padding: 2rem;
+	text-align: center;
+}
+
+.fmp-empty-state p {
+	margin: 0 0 1rem 0;
+	color: #646970;
+}
+
+.fmp-empty-state .button {
+	margin: 0;
+}
+
+/* Animal edit: Vaccination history section */
+.fmp-animal-vaccinations-section {
+	border-top: 1px solid #c3c4c7;
+	padding-top: 1.5rem;
+}
+
+.fmp-animal-vaccinations-section .fmp-section-title {
+	font-size: 1.1rem;
+	margin: 0 0 0.75rem 0;
+}
+
+.fmp-animal-vaccinations-section .wp-list-table {
+	margin-top: 0.75rem;
+}
+
+/* Vaccination status badges (Animals + Vaccinations list) */
+.fmp-badge {
+	display: inline-block;
+	padding: 0.2em 0.6em;
+	font-size: 12px;
+	font-weight: 600;
+	border-radius: 3px;
+}
+
+.fmp-badge-overdue {
+	background: #fce8e8;
+	color: #b32d2e;
+}
+
+.fmp-badge-due-soon {
+	background: #fcf0e8;
+	color: #d63638;
+}
+
+.fmp-badge-ok {
+	background: #edfaef;
+	color: #00a32a;
+}
+
+@media screen and (max-width: 1280px) {
+	.fmp-dashboard-cards {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.fmp-dashboard-cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.fmp-dashboard-cards {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Animal, Vaccination & Crop details meta boxes */
+.fmp-meta-box.fmp-animal-details,
+.fmp-meta-box.fmp-vaccination-details,
+.fmp-meta-box.fmp-crop-details,
+.fmp-meta-box.fmp-task-details,
+.fmp-meta-box.fmp-inventory-details,
+.fmp-meta-box.fmp-expense-details {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px 24px;
+	max-width: 800px;
+}
+
+.fmp-meta-box .fmp-meta-row {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.fmp-meta-box .fmp-meta-row label {
+	font-weight: 600;
+}
+
+.fmp-meta-box .fmp-meta-row input[type="text"],
+.fmp-meta-box .fmp-meta-row input[type="date"],
+.fmp-meta-box .fmp-meta-row input[type="number"],
+.fmp-meta-box .fmp-meta-row select {
+	max-width: 100%;
+}
+
+.fmp-meta-box .fmp-meta-row-full {
+	grid-column: 1 / -1;
+}
+
+.fmp-meta-box .fmp-meta-row-full textarea {
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+/* Reports page */
+.fmp-reports .fmp-report-section {
+	margin-bottom: 2.5rem;
+}
+
+.fmp-reports .fmp-report-title {
+	font-size: 1.1rem;
+	margin: 0 0 0.25rem 0;
+	padding: 0;
+}
+
+.fmp-reports .fmp-report-desc {
+	color: #646970;
+	margin: 0 0 0.75rem 0;
+}
+
+.fmp-reports .fmp-report-section .wp-list-table {
+	margin-top: 0;
+}
+
+.fmp-reports .fmp-report-actions {
+	margin: 0.75rem 0 0 0;
+}

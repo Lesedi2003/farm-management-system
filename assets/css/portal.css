@@ -1,0 +1,302 @@
+/**
+ * Farm Management Pro – SaaS portal front-end (no wp-admin look)
+ */
+
+:root {
+	--fmp-portal-primary: #2d5a3d;
+	--fmp-portal-primary-hover: #234a30;
+	--fmp-portal-bg: #f5f7f4;
+	--fmp-portal-card: #ffffff;
+	--fmp-portal-border: #e0e4dc;
+	--fmp-portal-text: #1e2a1e;
+	--fmp-portal-muted: #5a6b5a;
+	--fmp-portal-radius: 8px;
+	--fmp-portal-shadow: 0 1px 3px rgba(45, 90, 61, 0.08);
+	--fmp-portal-max: 900px;
+}
+
+.fmp-portal-wrap {
+	max-width: var(--fmp-portal-max);
+	margin: 0 auto;
+	padding: 1.5rem 1.25rem 2rem;
+	background: var(--fmp-portal-bg);
+	min-height: 50vh;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: var(--fmp-portal-text);
+	box-sizing: border-box;
+}
+
+.fmp-portal-wrap *,
+.fmp-portal-wrap *::before,
+.fmp-portal-wrap *::after {
+	box-sizing: border-box;
+}
+
+/* Login required card */
+.fmp-portal-login-required {
+	text-align: center;
+	padding: 2rem;
+	max-width: 28rem;
+	margin: 2rem auto;
+}
+
+.fmp-portal-login-required .fmp-portal-title {
+	margin: 0 0 0.5rem;
+	font-size: 1.25rem;
+}
+
+.fmp-portal-login-required p {
+	margin: 0 0 1.25rem;
+	color: var(--fmp-portal-muted);
+}
+
+/* Notices */
+.fmp-portal-notice {
+	padding: 0.75rem 1rem;
+	margin-bottom: 1rem;
+	border-radius: var(--fmp-portal-radius);
+	font-size: 0.9375rem;
+}
+
+.fmp-portal-notice-success {
+	background: #d4edda;
+	color: #155724;
+	border: 1px solid #c3e6cb;
+}
+
+.fmp-portal-notice-error {
+	background: #f8d7da;
+	color: #721c24;
+	border: 1px solid #f5c6cb;
+}
+
+/* Header */
+.fmp-portal-header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.fmp-portal-heading {
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--fmp-portal-text);
+}
+
+.fmp-portal-subheading {
+	margin: 0.25rem 0 0;
+	font-size: 0.9375rem;
+	color: var(--fmp-portal-muted);
+}
+
+.fmp-portal-back {
+	text-decoration: none;
+}
+
+/* Cards */
+.fmp-portal-card {
+	background: var(--fmp-portal-card);
+	border: 1px solid var(--fmp-portal-border);
+	border-radius: var(--fmp-portal-radius);
+	box-shadow: var(--fmp-portal-shadow);
+	padding: 1.25rem;
+}
+
+/* Quick Add grid */
+.fmp-portal-section-title {
+	margin: 0 0 1rem;
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: var(--fmp-portal-text);
+}
+
+.fmp-portal-quick-add {
+	margin-bottom: 2rem;
+}
+
+.fmp-portal-quick-add-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+	gap: 0.75rem;
+}
+
+.fmp-portal-quick-add-card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 80px;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: var(--fmp-portal-primary);
+	font-weight: 600;
+	font-size: 0.9375rem;
+	transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.fmp-portal-quick-add-card:hover {
+	background: #e8f0ea;
+	color: var(--fmp-portal-primary-hover);
+	box-shadow: 0 2px 8px rgba(45, 90, 61, 0.12);
+}
+
+/* Stats grid */
+.fmp-portal-stats {
+	margin-bottom: 2rem;
+}
+
+.fmp-portal-stats-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+	gap: 1rem;
+}
+
+.fmp-portal-stat-card {
+	text-align: center;
+	padding: 1.25rem 1rem;
+}
+
+.fmp-portal-stat-value {
+	display: block;
+	font-size: 1.75rem;
+	font-weight: 700;
+	color: var(--fmp-portal-primary);
+	line-height: 1.2;
+}
+
+.fmp-portal-stat-label {
+	display: block;
+	margin-top: 0.25rem;
+	font-size: 0.8125rem;
+	color: var(--fmp-portal-muted);
+}
+
+/* Buttons */
+.fmp-btn {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	font-size: 0.9375rem;
+	font-weight: 600;
+	line-height: 1.4;
+	text-align: center;
+	text-decoration: none;
+	border: none;
+	border-radius: var(--fmp-portal-radius);
+	cursor: pointer;
+	transition: background 0.2s, color 0.2s;
+}
+
+.fmp-btn-primary {
+	background: var(--fmp-portal-primary);
+	color: #fff;
+}
+
+.fmp-btn-primary:hover {
+	background: var(--fmp-portal-primary-hover);
+	color: #fff;
+}
+
+.fmp-btn-secondary {
+	background: var(--fmp-portal-card);
+	color: var(--fmp-portal-text);
+	border: 1px solid var(--fmp-portal-border);
+}
+
+.fmp-btn-secondary:hover {
+	background: #f0f2ef;
+}
+
+/* Form card */
+.fmp-portal-form-card {
+	max-width: 32rem;
+	padding: 1.5rem;
+}
+
+.fmp-portal-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.fmp-form-row {
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+}
+
+.fmp-form-row label {
+	font-weight: 600;
+	font-size: 0.875rem;
+	color: var(--fmp-portal-text);
+}
+
+.fmp-input {
+	width: 100%;
+	padding: 0.5rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.4;
+	border: 1px solid var(--fmp-portal-border);
+	border-radius: 6px;
+	background: var(--fmp-portal-card);
+	color: var(--fmp-portal-text);
+}
+
+.fmp-input:focus {
+	outline: none;
+	border-color: var(--fmp-portal-primary);
+	box-shadow: 0 0 0 2px rgba(45, 90, 61, 0.2);
+}
+
+textarea.fmp-input {
+	min-height: 100px;
+	resize: vertical;
+}
+
+.fmp-input-file {
+	padding: 0.35rem 0;
+}
+
+.fmp-form-hint {
+	display: block;
+	margin-top: 0.25rem;
+	font-size: 0.8125rem;
+	color: var(--fmp-portal-muted);
+}
+
+.fmp-form-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin-top: 0.5rem;
+}
+
+.fmp-portal-muted {
+	margin: 0 0 1rem;
+	color: var(--fmp-portal-muted);
+	font-size: 0.9375rem;
+}
+
+@media (max-width: 640px) {
+	.fmp-portal-wrap {
+		padding: 1rem;
+	}
+
+	.fmp-portal-quick-add-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.fmp-portal-stats-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.fmp-portal-header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
